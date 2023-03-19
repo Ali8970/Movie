@@ -1,0 +1,21 @@
+.card {
+  border: none;
+  background-color: #373b69;
+  padding: 0;
+  height: 100%;
+}
+.card-body {
+  background-color: #373b69;
+  color: #fff;
+}
+.rate {
+  background-color: #22254b;
+  padding: 5px 8px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  color: orange;
+}
+/* img {
+  height: 300px;
+} */

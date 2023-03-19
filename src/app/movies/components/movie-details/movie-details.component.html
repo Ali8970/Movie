@@ -1,0 +1,31 @@
+<div *ngIf="!loading">
+  <div class="card mt-3 mb-5 " *ngIf="movie" >
+    <img [src]="imgUrl + movie.backdrop_path" class="card-img" *ngIf="movie.backdrop_path" alt="{{
+      movie.title
+      }}">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-item-center p-1">
+        <h4 class="card-title">{{ movie.title }}</h4>
+        <h4 class="rate">{{ movie.vote_average.toFixed(1) }}</h4>
+      </div>
+      <h5 style="color: orange">Overview</h5>
+      <p class="card-text">{{ movie.overview }}</p>
+      <p style="color:tomato">{{ movie.release_date }}</p>
+    </div>
+  </div>
+
+  <h1>Actors</h1>
+  <div class="container">
+    <div class="items mb-5" >
+      <div class="entry" *ngFor="let credit of credits">
+        <p class="name">{{ credit.name }}</p>
+        <img [src]=" imgUrl + credit.profile_path " alt="{{ credit.name }}" *ngIf="credit.profile_path"/>
+        <p class="quote"> {{ credit.character }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center w-100" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>

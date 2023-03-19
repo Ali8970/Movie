@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]=" imgUrl + movie.poster_path" *ngIf="movie.poster_path" class="card-img-top"
+    [alt]="movie.title">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-item-center p-1">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <h5 class="rate">{{ movie.vote_average }}</h5>
+    </div>
+    <p class="card-text d-flex align-item-flex-end" style="color:coral">{{ movie.release_date }}</p>
+  </div>
+</div>

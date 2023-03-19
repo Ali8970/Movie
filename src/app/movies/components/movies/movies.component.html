@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="d-flex mt-5"
+  role="search">
+  <input class="form-control me-2" formControlName="search" type="search"
+    placeholder="Find your movies"
+    aria-label="Search">
+  <button class="btn" type="submit">Search</button>
+</form>
+
+
+<div class="tags mt-4" >
+  <div class="tag" *ngFor="let genre of genres" (click)="getMovieByGenres(genre.id)">{{genre.name}}</div>
+</div>
+
+
+<div class="row pb-4" *ngIf="!loading">
+  <div class="card-group mt-5 col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let
+    movie of movies;let i=index" >
+    <app-movieapp-movie [movie]="movie" routerLink="details/{{ movie.id }}"></app-movieapp-movie>
+  </div>
+</div>
+<div class="text-center w-100" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+
+<div class="container mb-5">
+  <ul class="pagination" #pagination>
+    <li  *ngFor="let movie of movies; let i=index" (click)="getMoviesByPage(i+1)" style="cursor: pointer;" >
+      <a >{{ i+1 }}</a>
+    </li>
+  </ul>
+</div>

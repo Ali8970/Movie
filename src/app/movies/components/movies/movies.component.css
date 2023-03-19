@@ -1,0 +1,89 @@
+:root {
+  --main-color: #373b69;
+}
+/*search*/
+.form-control {
+  color: #fff;
+  background-color: var(--main-color);
+  border: 1px solid #6610f2;
+  border-radius: 10px;
+}
+.btn {
+  background-color: var(--main-color);  color: #fff;
+  border: 1px solid #6610f2;
+  border-radius: 10px;
+}
+
+/*genres*/
+
+.tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.tags .tag {
+  color: white;
+  padding: 10px 20px;
+  background-color: orange;
+  border-radius: 50px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+/*movies cards*/
+
+.container {
+  background: #22254b;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: -3px -3px 7px  var(--main-color), 3px 3px 5px var(--main-color);
+}
+.card-group {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/*pagination*/
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+}
+.pagination li {
+  flex: 1;
+  margin: 0px 2px;
+  background: #22254b;
+  border-radius: 3px;
+  box-shadow: 0px -1px 2px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+.pagination li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  height: 45px;
+  width: 55px;
+  display: block;
+  line-height: 45px;
+  text-align: center;
+}
+
+
+.pagination li.active a {
+  font-size: 17px;
+  color: #6f6cde;
+}
+.pagination li:first-child {
+  margin: 0 15px 0 0;
+}
+.pagination li:last-child {
+  margin: 0 0 0 15px;
+}
+

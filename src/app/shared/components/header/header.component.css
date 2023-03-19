@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+nav {
+  color: #fff;
+  background-color: #373b69;
+}
+.navbar-brand{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+li a {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.navbar-toggler{
+  background-color: #eee;
+}
